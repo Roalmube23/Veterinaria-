@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header1">
+        <div class="header">
+            <h1>CLINICA Pet Friends </h1>
+            <p></p>
+            <nav id="barra_inicio">
+                <ul id="links">
+                    <li><a href="#inicio" class="seleccionado">PLANES DE MEDICINA</a></li>
+                    <li><a href="#sobre_mi">SEDES</a></li>
+                    <li><a href="#servicios">SERVICIOS</a></li>
+                    <li><a href="#portafolio">HOSPITAL 24 HORAS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>      
+    </div>
+    
+    <!--segunda parte-->
+
+    <div id="inicio">
+        <div class="texto">
+            <div class="nombre">
+                <h1 class="h1">Bienvenidos a nuestra CLINICA veterinaria Pet Friends </h1>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+<button type="button" class="btn_1 btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Crear cita
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Agenda tu cita</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <h2>Formulario de Registro de Citas</h2>
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="petName">Nombre de la Mascota:</label>
+                        <input type="text" id="petName" name="petName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ownerName">Nombre del Propietario:</label>
+                        <input type="text" id="ownerName" name="ownerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petType">Tipo de Mascota:</label>
+                        <select id="petType" name="petType" required>
+                            <option value="">Seleccione...</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Fecha de cita:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Hora de cita:</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="symptoms">Síntomas:</label>
+                        <textarea id="symptoms" name="symptoms" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="petPhoto">Foto de la Mascota:</label>
+                        <input type="file" id="petPhoto" name="petPhoto" accept="image/*" required>
+                    </div>
+                    <button type="submit">Crear Cita</button>
+                </form>
+                <!-- <div id="appointmentCardContainer"></div> -->
+            </div>
+            <script src="script.js"></script>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <div id="appointmentCardContainer"></div>
+</body>
+</html>
